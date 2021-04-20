@@ -82,7 +82,7 @@ public:
     if(ret <= 0)
     {
       //非阻塞情况下，无数据可读
-      if(errno = EAGAIN)
+      if(errno == EAGAIN)
       {
         return true;
       }
